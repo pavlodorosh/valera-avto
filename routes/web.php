@@ -17,14 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Auth::routes();
 
-Route::get('/contacts', function () {
-    return view('login');
-});
-
-Route::get('/catalog', function () {
-    return view('login');
-});
+Route::get('/home', 'HomeController@index')->name('home');
