@@ -13,15 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/admin', function () {   
+Route::get('/user', function () {   
     return view('admin');
 });
 
-Route::get('/admin/{vue_capture?}', function() {
+Route::get('/user/{vue_capture?}', function() {
     return view('admin');
 })->where('vue_capture', '[\/\w\.-]*');
 
 
 Route::get('/', function () {   
     return view('home');
+});
+Route::get('/contact', function () {   
+    return view('pages/contact');
+});
+Route::get('/about', function () {   
+    return view('pages/about');
 });
