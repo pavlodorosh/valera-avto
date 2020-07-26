@@ -37703,7 +37703,7 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "font-weight-bold small",
-                          attrs: { to: "/admin" }
+                          attrs: { to: "/user" }
                         },
                         [_vm._v("Назад до форми входу")]
                       )
@@ -37803,7 +37803,7 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "font-weight-bold small",
-                          attrs: { to: "/admin/register" }
+                          attrs: { to: "/user/register" }
                         },
                         [_vm._v("Створити профіль")]
                       )
@@ -37819,7 +37819,7 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "font-weight-bold small",
-                          attrs: { to: "/admin/forget" }
+                          attrs: { to: "/user/forget" }
                         },
                         [_vm._v("Відновити пароль")]
                       )
@@ -37953,7 +37953,7 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "font-weight-bold small",
-                          attrs: { to: "/admin" }
+                          attrs: { to: "/user" }
                         },
                         [_vm._v("Вже є профіль?")]
                       )
@@ -53540,15 +53540,15 @@ var register = __webpack_require__(/*! ./components/auth/register.vue */ "./reso
 var forget = __webpack_require__(/*! ./components/auth/forget.vue */ "./resources/js/components/auth/forget.vue")["default"];
 
 var routes = [{
-  path: '/admin',
+  path: '/user',
   component: login,
   name: '/'
 }, {
-  path: '/admin/register',
+  path: '/user/register',
   component: register,
   name: 'register'
 }, {
-  path: '/admin/forget',
+  path: '/user/forget',
   component: forget,
   name: 'forget'
 }];

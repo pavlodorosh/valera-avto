@@ -28,7 +28,7 @@
                   </form>
                   <hr />
                   <div class="text-center">
-                    <router-link to="/admin" class="font-weight-bold small">Назад до форми входу</router-link>
+                    <router-link to="/user" class="font-weight-bold small">Назад до форми входу</router-link>
                   </div>
                 </div>
               </div>
