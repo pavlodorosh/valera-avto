@@ -31,7 +31,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <router-link class="font-weight-bold small" to="/">Вже є профіль?</router-link>
+                    <router-link class="font-weight-bold small" to="/admin">Вже є профіль?</router-link>
                   </div>
                   <div class="text-center">
                   </div>

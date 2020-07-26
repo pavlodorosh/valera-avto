@@ -45,10 +45,10 @@
                   </form>
                   <hr />
                   <div class="text-center">
-                    <router-link to="/register" class="font-weight-bold small">Створити профіль</router-link>
+                    <router-link to="/admin/register" class="font-weight-bold small">Створити профіль</router-link>
                   </div>
                   <div class="text-center">
-                    <router-link to="/forget" class="font-weight-bold small">Відновити пароль</router-link>
+                    <router-link to="/admin/forget" class="font-weight-bold small">Відновити пароль</router-link>
                   </div>
                 </div>
               </div>
