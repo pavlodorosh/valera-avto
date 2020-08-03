@@ -44,9 +44,9 @@
                     </div>
                   </form>
                   <hr />
-                  <div class="text-center">
+                  <!-- <div class="text-center">
                     <router-link to="/user/register" class="font-weight-bold small">Створити профіль</router-link>
-                  </div>
+                  </div> -->
                   <div class="text-center">
                     <router-link to="/user/forget" class="font-weight-bold small">Відновити пароль</router-link>
                   </div>

@@ -37803,22 +37803,6 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "font-weight-bold small",
-                          attrs: { to: "/user/register" }
-                        },
-                        [_vm._v("Створити профіль")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "text-center" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "font-weight-bold small",
                           attrs: { to: "/user/forget" }
                         },
                         [_vm._v("Відновити пароль")]
@@ -53573,8 +53557,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\OpenServer\domains\avto\valera-avto\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\OpenServer\domains\avto\valera-avto\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Web\Auto\valera-avto\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Web\Auto\valera-avto\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
