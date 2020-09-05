@@ -44,7 +44,9 @@ class AuthController extends Controller
             $token = $user->createToken($user->email . '-' . now());
 
             return response()->json([
-                'token' => $token->accessToken
+                'access_token' => $token->accessToken,
+                'token_type' => 'bearer',
+                'enspires_in' => 3600
             ]);
         }
     }

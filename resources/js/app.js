@@ -1,18 +1,29 @@
 
 require('./bootstrap');
 
+import 'vuetify/dist/vuetify.min.css';
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vuetify from 'vuetify'
 import {routes} from './routes'
-Vue.use(VueRouter)
 
+Vue.use(VueRouter)
+Vue.use(Vuetify)
+
+const vuetify = new Vuetify({
+	icons: {
+		iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+	},
+})
 
 const router = new VueRouter({
 	routes,
 	mode: 'history'
 })
 
-const app = new Vue({
+new Vue({
 	el: '#app-auth',
-	router
+	router,
+	vuetify
 });
