@@ -45,8 +45,11 @@ class AuthController extends Controller
 
             return response()->json([
                 'access_token' => $token->accessToken,
-                'token_type' => 'bearer',
-                'enspires_in' => 3600
+                'token_type' => 'ama_auth_token',
+                'enspires_in' => 3600,
+                'name' => $user->name,
+                'email' => $user->email,
+                'user_id' => $user->id
             ]);
         }
     }
