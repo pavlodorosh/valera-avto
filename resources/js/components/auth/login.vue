@@ -4,9 +4,6 @@
             <v-container class="fill-height" fluid>
                 <v-row align="center" justify="center">
                     <v-col cols="12" sm="8" md="4">
-                        <v-alert v-if="error" type="error">
-                            Пользователь не найден
-                        </v-alert>
                         <v-card class="elevation-12">
                             <v-toolbar color="brown" dark flat>
                                 <v-toolbar-title>Форма входа</v-toolbar-title>
@@ -73,9 +70,7 @@ export default {
 			email: null,
 			password: null,
         },
-        loading: false,
-        error: false,
-        rules: [value => !!value || "Поле не должно быть пустым"]
+        loading: false
     }),
     methods: {
         login(e) {
@@ -85,13 +80,19 @@ export default {
 					.post("/api/login", this.form)
 					.then(res => {
                         this.loading = false
-                        this.error = false
-                        User.responseAfterLogin(res)
                         this.$router.push({name: 'dashboard'})
+                        User.responseAfterLogin(res)
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Авторизация прошла успешно'
+                        })
 					})
 					.catch(error => {
                         this.loading = false
-                        this.error = true
+                        Toast.fire({
+                            icon: 'warning',
+                            title: 'Неверный Email или Пароль'
+                        })
 						console.log(error.response.data)
 					});
 			}
