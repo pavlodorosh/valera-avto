@@ -62,6 +62,12 @@
 
 <script>
 export default {
+    created(){
+        console.log(User.loggedIn())
+        if(User.loggedIn()){
+            this.$router.push({name: 'dashboard'})
+        }
+    },
     data: () => ({
         form: {
 			email: null,
@@ -72,15 +78,16 @@ export default {
         rules: [value => !!value || "Поле не должно быть пустым"]
     }),
     methods: {
-        login: function (e) {
+        login(e) {
 			if(!this.loading){
 				this.loading = true
 				axios
 					.post("/api/login", this.form)
 					.then(res => {
-						this.loading = false
+                        this.loading = false
                         this.error = false
-						console.log(res.data)
+                        User.responseAfterLogin(res)
+                        this.$router.push({name: 'dashboard'})
 					})
 					.catch(error => {
                         this.loading = false

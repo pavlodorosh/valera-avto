@@ -2,7 +2,7 @@ import AppStorage from './AppStorage'
 import Token from './Token'
 
 class User{
-	responsiveAfterLogin(res){
+	responseAfterLogin(res){
 		const access_token = res.data.access_token
 		const username = res.data.name
 		if(Token.isValid(access_token)){
@@ -11,11 +11,11 @@ class User{
 	}
 
 	hasToken(){
-		const storeToken = localStorage.getItem(token)
+		const storeToken = localStorage.getItem('token')
 		if(storeToken){
 			return Token.isValid(storeToken) ? true : false
 		}
-		false
+		return false
 	}
 
 	loggedIn(){
